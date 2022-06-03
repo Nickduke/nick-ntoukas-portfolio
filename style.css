@@ -1,6 +1,11 @@
 /* /////////////
 SET-UP
 ///////////// */
+/* Primary font */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+/* Secondary font */
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -211,16 +216,72 @@ template {
 }
 
 /* /////////////
-GLOBAL VARIABLES
+CUSTOM PROPERTIES
 ///////////// */
+:root {
+  --primary-color: rgba(0, 217, 255, 0.507);
+  --secondary-color: grey;
+  --main-dark: rgb(39, 34, 34);
+  --secondary-dark: rgba(39, 34, 34, 0.589);
+  --main-white: white;
+  --title-spacing: 0.2rem;
+  --body-spacing: 0.05rem;
+  --main-transition: all 0.2s linear;
+  --fs-primary: 2.5rem;
+  --fs-secondary: 2rem;
+  --primary-font: 'Dosis', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+}
 
 /* /////////////
-GLOBAL STYLES
+BASE STYLES
 ///////////// */
+.wrapper {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  font-size: 3rem;
+}
+
+.skip-link:focus {
+  left: 0;
+}
 
 /* /////////////
 TYPOGRAPHY
 ///////////// */
+html {
+  font-size: 125%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-dark);
+  transition: var(--main-transition);
+  font-family: var(--primary-font);
+  letter-spacing: var(--body-spacing);
+  text-transform: uppercase;
+}
 
 /* /////////////
 HEADER STYLES
