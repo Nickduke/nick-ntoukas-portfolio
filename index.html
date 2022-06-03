@@ -7,6 +7,12 @@
     <title>Nick Ntoukas - Portfolio</title>
     <!-- Primary Font -->
     <!-- Secondary Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100&family=Raleway:wght@300&family=Roboto+Mono:wght@100;200;700&family=Space+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/dbae5020f0.js"
@@ -18,30 +24,35 @@
   <body>
     <a href="#main" class="skip-link">Skip to main content.</a>
     <header class="header" id="home">
-      <div class="wrapper">
-        <h1 class="logo">
-          <a href="#home">nick ntoukas</a>
-        </h1>
-        <nav class="nav">
-          <ul class="nav__links">
-            <li class="nav__links--link">
-              <a href="#about">about</a>
-            </li>
-            <li class="nav__links--link">
-              <a href="#projects">projects</a>
-            </li>
-            <li class="nav__links--link">
-              <a href="#tools">tools</a>
-            </li>
-            <li class="nav__links--link">
-              <a href="#contact">contact</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="wrapper header-wrapper">
+        <div class="nav-container">
+          <h1 class="logo">
+            <a href="#home" class="hover-underline-animation">nick ntoukas</a>
+          </h1>
+          <nav class="nav">
+            <ul class="nav__links">
+              <li class="nav__links--link">
+                <a href="#about" class="hover-underline-animation">about</a>
+              </li>
+              <li class="nav__links--link">
+                <a href="#projects" class="hover-underline-animation"
+                  >projects</a
+                >
+              </li>
+              <li class="nav__links--link">
+                <a href="#tools" class="hover-underline-animation">tools</a>
+              </li>
+              <li class="nav__links--link">
+                <a href="#contact" class="hover-underline-animation">contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <h2 class="title">
           Hello! My name is Nick and I am a
-          <span class="typed">front-end developer</span>
+          <div class="typed">front-end developer</div>
         </h2>
+        <a href="#about"><span class="down"></span></a>
       </div>
     </header>
 
@@ -135,45 +146,47 @@
 
       <!-- Footer -->
       <footer class="footer" id="contact">
-        <a href="mailto:ntoukas.nick@gmail.com" class="footer__link"
-          >ntoukas.nick@gmail.com</a
-        >
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a
-              href="https://www.linkedin.com/in/nick-ntoukas-45a875125/"
-              class="social-list__link"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin-in"></i>linkedin</a
-            >
-          </li>
-          <li class="social-list__item">
-            <a
-              href="https://github.com/Nickduke"
-              class="social-list__link"
-              target="_blank"
-              ><i class="fa-brands fa-github"></i>github</a
-            >
-          </li>
-          <li class="social-list__item">
-            <a
-              href="https://www.instagram.com/doukanator/"
-              class="social-list__link"
-              target="_blank"
-              ><i class="fa-brands fa-instagram"></i>instagram</a
-            >
-          </li>
-          <li class="social-list__item">
-            <a
-              href="https://twitter.com/nickntouk"
-              class="social-list__link"
-              target="_blank"
-            >
-              <i class="fa-brands fa-twitter"></i>
-              twitter</a
-            >
-          </li>
-        </ul>
+        <div class="wrapper footer-wrapper">
+          <a href="mailto:ntoukas.nick@gmail.com" class="footer__link"
+            >ntoukas.nick@gmail.com</a
+          >
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a
+                href="https://www.linkedin.com/in/nick-ntoukas-45a875125/"
+                class="social-list__link"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin-in"></i>linkedin</a
+              >
+            </li>
+            <li class="social-list__item">
+              <a
+                href="https://github.com/Nickduke"
+                class="social-list__link"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i>github</a
+              >
+            </li>
+            <li class="social-list__item">
+              <a
+                href="https://www.instagram.com/doukanator/"
+                class="social-list__link"
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i>instagram</a
+              >
+            </li>
+            <li class="social-list__item">
+              <a
+                href="https://twitter.com/nickntouk"
+                class="social-list__link"
+                target="_blank"
+              >
+                <i class="fa-brands fa-twitter"></i>
+                twitter</a
+              >
+            </li>
+          </ul>
+        </div>
       </footer>
     </main>
   </body>

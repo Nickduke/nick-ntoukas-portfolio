@@ -5,6 +5,7 @@ SET-UP
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
 
 /* Secondary font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 html {
   line-height: 1.15;
@@ -220,17 +221,19 @@ CUSTOM PROPERTIES
 ///////////// */
 :root {
   --primary-color: rgba(0, 217, 255, 0.507);
-  --secondary-color: grey;
+  --main-grey: rgba(128, 128, 128, 0.267);
   --main-dark: rgb(39, 34, 34);
   --secondary-dark: rgba(39, 34, 34, 0.589);
   --main-white: white;
   --title-spacing: 0.2rem;
   --body-spacing: 0.05rem;
   --main-transition: all 0.2s linear;
-  --fs-primary: 2.5rem;
-  --fs-secondary: 2rem;
+  --fs-x-large: 3rem;
+  --fs-large: 2.5rem;
+  --fs-medium: 2rem;
+  --fs-small: 1.6rem;
   --primary-font: 'Dosis', sans-serif;
-  --secondary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Source Sans Pro', sans-serif;
 }
 
 /* /////////////
@@ -238,7 +241,7 @@ BASE STYLES
 ///////////// */
 .wrapper {
   width: 90%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -272,20 +275,133 @@ TYPOGRAPHY
 ///////////// */
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--fs-large);
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 a {
+  letter-spacing: var(--body-spacing);
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-weight: normal;
+  font-size: var(--fs-x-large);
+  color: var(--main-dark);
+  letter-spacing: var(--body-spacing);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.nav__links--link {
+  margin: 1em;
 }
 
 a {
   text-decoration: none;
   color: var(--main-dark);
-  transition: var(--main-transition);
   font-family: var(--primary-font);
   letter-spacing: var(--body-spacing);
   text-transform: uppercase;
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-dark);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 /* /////////////
 HEADER STYLES
 ///////////// */
+header {
+  min-height: 100vh;
+  background: var(--main-grey);
+}
+
+.title {
+  padding-top: 5em;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.226); */
+  padding-bottom: 0.5em;
+  width: 40vw;
+  letter-spacing: var(--title-spacing);
+}
+
+.down {
+  display: block;
+  width: 1px;
+  height: 5rem;
+  margin: 18em auto 0 auto;
+  background: var(--main-dark);
+  animation: pulse 3s ease-in-out infinite;
+  transition: var(--main-transition);
+}
+
+@keyframes pulse {
+  from {
+    transform: translateY(0em);
+  }
+
+  50% {
+    transform: translateY(3em);
+  }
+
+  to {
+    transform: translateY(0em);
+  }
+}
+
+/* ------------------ Typing -------------- */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.typed {
+  width: 28ch;
+  padding-bottom: 0.5em;
+  animation: typing 4s, 0.5s infinite;
+  /* border-bottom: 1px solid var(--main-grey); */
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 1px solid; */
+  font-family: var(--secondary-font);
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
 
 /* /////////////
 NAV STYLES
@@ -306,3 +422,29 @@ TOOLS STYLES
 /* /////////////
 FOOTER STYLES
 ///////////// */
+.footer {
+  background: var(--main-dark);
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-wrapper a {
+  color: var(--main-white);
+}
+
+.social-list {
+  display: flex;
+  text-align: center;
+}
+
+.social-list__item {
+  margin: 3em;
+}
