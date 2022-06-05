@@ -231,7 +231,7 @@ CUSTOM PROPERTIES
   --fs-x-large: 3rem;
   --fs-large: 2.5rem;
   --fs-medium: 2rem;
-  --fs-small: 1.6rem;
+  --fs-small: 1rem;
   --primary-font: 'Dosis', sans-serif;
   --secondary-font: 'Source Sans Pro', sans-serif;
 }
@@ -279,13 +279,13 @@ html {
 }
 
 h1 {
-  font-size: var(--fs-large);
   font-weight: normal;
   margin: 0;
 }
 
 h1 a {
-  letter-spacing: var(--body-spacing);
+  /* letter-spacing: var(--body-spacing); */
+  font-family: var(--primary-font);
 }
 
 h2 {
@@ -294,6 +294,22 @@ h2 {
   font-size: var(--fs-x-large);
   color: var(--main-dark);
   letter-spacing: var(--body-spacing);
+}
+
+h3 {
+  font-family: var(--primary-font);
+  font-weight: normal;
+  text-transform: capitalize;
+  letter-spacing: var(--title-spacing);
+  font-size: var(--fs-medium);
+  margin: 0;
+}
+
+p {
+  font-family: var(--secondary-font);
+  font-size: var(--fs-small);
+  line-height: 1.6rem;
+  color: grey;
 }
 
 .nav-container {
@@ -314,7 +330,7 @@ a {
   text-decoration: none;
   color: var(--main-dark);
   font-family: var(--primary-font);
-  letter-spacing: var(--body-spacing);
+  /* letter-spacing: var(--body-spacing); */
   text-transform: uppercase;
 }
 
@@ -352,9 +368,7 @@ header {
 
 .title {
   padding-top: 5em;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.226); */
   padding-bottom: 0.5em;
-  width: 40vw;
   letter-spacing: var(--title-spacing);
 }
 
@@ -362,7 +376,7 @@ header {
   display: block;
   width: 1px;
   height: 5rem;
-  margin: 18em auto 0 auto;
+  margin: 15em auto 0 auto;
   background: var(--main-dark);
   animation: pulse 3s ease-in-out infinite;
   transition: var(--main-transition);
@@ -398,22 +412,48 @@ header {
   overflow: hidden;
   /* border-right: 1px solid; */
   font-family: var(--secondary-font);
-  font-size: var(--fs-small);
+  font-size: 1.6rem;
   text-transform: uppercase;
   margin-top: 10px;
 }
 
 /* /////////////
-NAV STYLES
-///////////// */
-
-/* /////////////
 ABOUT STYLES
 ///////////// */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.about__container {
+  margin: 7em auto;
+}
+
+.about__title {
+  text-align: center;
+}
+
+.about__sub-title {
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+  font-size: var(--fs-small);
+  color: grey;
+  font-weight: normal;
+  letter-spacing: var(--body-spacing);
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+#about img {
+  border-radius: 100px;
+}
 
 /* /////////////
 PROJECTS STYLES
 ///////////// */
+#projects {
+  background: rgba(128, 128, 128, 0.068);
+}
 
 /* /////////////
 TOOLS STYLES
