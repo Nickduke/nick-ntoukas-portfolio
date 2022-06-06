@@ -221,7 +221,7 @@ CUSTOM PROPERTIES
 ///////////// */
 :root {
   --primary-color: rgba(0, 217, 255, 0.507);
-  --main-grey: rgba(128, 128, 128, 0.267);
+  --main-grey: rgb(54, 54, 54);
   --main-dark: rgb(39, 34, 34);
   --secondary-dark: rgba(39, 34, 34, 0.589);
   --main-white: white;
@@ -231,7 +231,7 @@ CUSTOM PROPERTIES
   --fs-x-large: 3rem;
   --fs-large: 2.5rem;
   --fs-medium: 2rem;
-  --fs-small: 1rem;
+  --fs-small: 0.9rem;
   --primary-font: 'Dosis', sans-serif;
   --secondary-font: 'Source Sans Pro', sans-serif;
 }
@@ -305,11 +305,26 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: var(--title-spacing);
+  color: var(--main-dark);
+}
+
+h5 {
+  font-family: var(--primary-font);
+  color: var(--main-dark);
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
 p {
   font-family: var(--secondary-font);
   font-size: var(--fs-small);
   line-height: 1.6rem;
-  color: grey;
+  color: var(--main-grey);
 }
 
 .nav-container {
@@ -353,7 +368,8 @@ a {
   transition: transform 0.25s ease-out;
 }
 
-.hover-underline-animation:hover:after {
+.hover-underline-animation:hover:after,
+.hover-underline-animation:focus:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -363,11 +379,11 @@ HEADER STYLES
 ///////////// */
 header {
   min-height: 100vh;
-  background: var(--main-grey);
+  background: rgba(128, 128, 128, 0.219);
 }
 
 .title {
-  padding-top: 5em;
+  margin-top: 6em;
   padding-bottom: 0.5em;
   letter-spacing: var(--title-spacing);
 }
@@ -376,7 +392,8 @@ header {
   display: block;
   width: 1px;
   height: 5rem;
-  margin: 15em auto 0 auto;
+  margin: 5em auto auto auto;
+
   background: var(--main-dark);
   animation: pulse 3s ease-in-out infinite;
   transition: var(--main-transition);
@@ -437,15 +454,12 @@ ABOUT STYLES
   text-transform: uppercase;
   font-family: var(--secondary-font);
   font-size: var(--fs-small);
-  color: grey;
+  color: var(--main-grey);
   font-weight: normal;
   letter-spacing: var(--body-spacing);
   margin-top: 0.5em;
+  margin-bottom: 32m;
   text-align: center;
-}
-
-#about img {
-  border-radius: 100px;
 }
 
 /* /////////////
@@ -453,6 +467,50 @@ PROJECTS STYLES
 ///////////// */
 #projects {
   background: rgba(128, 128, 128, 0.068);
+}
+
+.projects__title {
+  text-align: center;
+  padding-bottom: 2em;
+  padding-top: 5em;
+}
+
+.projects__container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.projects__item {
+  margin: 2em auto;
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-image {
+  border: 0.1px solid red;
+  border-radius: 0px 30px 0px 30px;
+}
+
+.projects__item a {
+  /* padding: 20px; */
+  flex: 1;
+}
+
+.project-info {
+  flex: 1;
+  padding: 1em 0 0 3em;
+}
+
+.project-info h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.project-info h5 {
+  padding: 0;
+  margin: 0;
 }
 
 /* /////////////
@@ -487,4 +545,29 @@ FOOTER STYLES
 
 .social-list__item {
   margin: 3em;
+}
+
+.hover-underline-animation-foot {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.hover-underline-animation-foot:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-foot:hover:after,
+.hover-underline-animation-foot:focus:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
