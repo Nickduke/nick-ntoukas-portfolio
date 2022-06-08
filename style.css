@@ -668,6 +668,10 @@ FOOTER STYLES
 .fa-brands {
   font-size: 0.8rem;
 }
+
+.dark {
+  color: var(--main-dark);
+}
 /* /////////////
 MEDIA QUERIES
 ///////////// */
