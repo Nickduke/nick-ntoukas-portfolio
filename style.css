@@ -629,6 +629,9 @@ FOOTER STYLES
   margin: 0;
 }
 
+.fa-brands {
+  font-size: 0.8rem;
+}
 /* /////////////
 MEDIA QUERIES
 ///////////// */
