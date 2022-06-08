@@ -14,6 +14,7 @@ html {
 }
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 article,
 aside,
@@ -327,20 +328,6 @@ p {
   color: var(--main-grey);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2em;
-}
-
-.nav__links {
-  display: flex;
-}
-
-.nav__links--link {
-  margin: 1em;
-}
-
 a {
   text-decoration: none;
   color: var(--main-dark);
@@ -386,6 +373,35 @@ header {
   margin-top: 6em;
   padding-bottom: 0.5em;
   letter-spacing: var(--title-spacing);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.nav__links--link {
+  margin: 1em;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--main-dark);
+  border-radius: 100px;
 }
 
 .down {
@@ -451,11 +467,10 @@ ABOUT STYLES
 }
 
 .about__sub-title {
-  text-transform: uppercase;
   font-family: var(--secondary-font);
   font-size: var(--fs-small);
   color: var(--main-grey);
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: var(--body-spacing);
   margin-top: 0.5em;
   margin-bottom: 32m;
@@ -471,7 +486,7 @@ PROJECTS STYLES
 
 .projects__title {
   text-align: center;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   padding-top: 5em;
 }
 
@@ -479,6 +494,10 @@ PROJECTS STYLES
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.projects__item {
+  border-radius: 0px 30px 0px 30px;
 }
 
 .projects__item:nth-child(1) {
@@ -498,8 +517,11 @@ PROJECTS STYLES
 
 .projects__item:nth-child(4) {
   background: rgba(204, 129, 67, 0.137);
-  border-radius: 0px 30px 0px 30px;
   margin-bottom: 8em;
+}
+
+.project-image {
+  border-radius: 0px 0px 0px 30px;
 }
 
 .projects__item {
@@ -516,23 +538,29 @@ PROJECTS STYLES
 
 .project-info {
   flex: 1;
-  padding: 1em 0 0 3em;
+  margin: 0.5em 3em;
 }
 
 .project-info h4 {
-  padding: 0;
   margin: 0;
+  font-size: 1.4rem;
 }
 
 .project-info h5 {
-  padding: 0;
-  margin: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0;
 }
 
 .project-info a {
   font-size: var(--fs-small);
   margin: 1em 0.5em 0 0;
   text-transform: lowercase;
+}
+
+.project-info p {
+  font-size: var(--fs-small);
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 /* /////////////
@@ -547,6 +575,7 @@ FOOTER STYLES
   min-height: 20vh;
   display: flex;
   align-items: center;
+  font-size: var(--fs-small);
 }
 
 .footer-wrapper {
@@ -557,6 +586,7 @@ FOOTER STYLES
 }
 
 .footer-wrapper a {
+  text-transform: lowercase;
   color: var(--main-white);
 }
 
@@ -592,4 +622,82 @@ FOOTER STYLES
 .hover-underline-animation-foot:focus:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+.copyright-footer {
+  color: var(--main-dark);
+  text-align: center;
+  margin: 0;
+}
+
+/* /////////////
+MEDIA QUERIES
+///////////// */
+/* Tablet */
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+    padding-top: 10px;
+  }
+  /* .bar {
+    background-color: white;
+  } */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav__links.active {
+    left: 0;
+  }
+
+  .nav__links {
+    position: fixed;
+    left: -100%;
+    /* top: 100px; */
+    padding: 1em;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--main-dark);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  /* .nav-container {
+    padding: 0;
+  } */
+
+  .nav__links--link a {
+    color: var(--main-white);
+  }
+  .nav__links--link a:after {
+    background-color: var(--main-white);
+  }
+}
+
+@media (max-width: 1300px) {
+  .projects__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-image {
+    border-radius: 0px 30px 0px 0px;
+  }
+  .project-info {
+    margin: 3em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .social-list {
+    flex-direction: column;
+  }
+  .footer__link {
+    margin: 3em 0;
+  }
 }
