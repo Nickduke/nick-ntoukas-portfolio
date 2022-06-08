@@ -542,7 +542,7 @@ PROJECTS STYLES
 }
 
 .project-info h4 {
-  margin: 0;
+  margin: 20px 0 0 0;
   font-size: 1.4rem;
 }
 
@@ -561,6 +561,15 @@ PROJECTS STYLES
   font-size: var(--fs-small);
   margin-bottom: 2px;
   margin-top: 2px;
+  line-height: 25px;
+}
+
+.project-info i {
+  font-size: 1.4rem;
+}
+
+.tech-stack-icons {
+  padding-top: 5px;
 }
 
 /* /////////////
@@ -586,8 +595,8 @@ FOOTER STYLES
 }
 
 .footer-wrapper a {
-  text-transform: lowercase;
   color: var(--main-white);
+  letter-spacing: var(--title-spacing);
 }
 
 .social-list {
@@ -664,7 +673,7 @@ MEDIA QUERIES
     padding: 1em;
     gap: 0;
     flex-direction: column;
-    background-color: var(--main-dark);
+    background-color: var(--main-white);
     width: 100%;
     height: 100%;
     transition: 0.3s ease-in-out;
@@ -676,10 +685,13 @@ MEDIA QUERIES
   } */
 
   .nav__links--link a {
-    color: var(--main-white);
+    color: var(--main-dark);
   }
   .nav__links--link a:after {
     background-color: var(--main-white);
+  }
+  .down {
+    display: none;
   }
 }
 
