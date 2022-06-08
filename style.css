@@ -462,6 +462,10 @@ ABOUT STYLES
   margin: 7em auto;
 }
 
+.about__container {
+  letter-spacing: var(--body-spacing);
+}
+
 .about__title {
   text-align: center;
 }
@@ -473,7 +477,6 @@ ABOUT STYLES
   font-weight: bold;
   letter-spacing: var(--body-spacing);
   margin-top: 0.5em;
-  margin-bottom: 32m;
   text-align: center;
 }
 
@@ -532,7 +535,6 @@ PROJECTS STYLES
 }
 
 .projects__item a {
-  /* padding: 20px; */
   flex: 1;
 }
 
@@ -549,12 +551,13 @@ PROJECTS STYLES
 .project-info h5 {
   margin-top: 0.5em;
   margin-bottom: 0;
+  letter-spacing: var(--title-spacing);
 }
 
 .project-info a {
   font-size: var(--fs-small);
   margin: 1em 0.5em 0 0;
-  text-transform: lowercase;
+  letter-spacing: var(--body-spacing);
 }
 
 .project-info p {
@@ -562,6 +565,7 @@ PROJECTS STYLES
   margin-bottom: 2px;
   margin-top: 2px;
   line-height: 25px;
+  letter-spacing: var(--body-spacing);
 }
 
 .project-info i {
@@ -575,6 +579,29 @@ PROJECTS STYLES
 /* /////////////
 TOOLS STYLES
 ///////////// */
+
+.tools-wrapper {
+  justify-content: flex;
+  align-items: center;
+}
+
+.tools__title {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.tools__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.tools__row {
+  font-size: 5rem;
+  padding: 10px;
+}
 
 /* /////////////
 FOOTER STYLES
@@ -679,6 +706,8 @@ MEDIA QUERIES
     transition: 0.3s ease-in-out;
     justify-content: space-evenly;
     align-items: center;
+    font-size: var(--fs-medium);
+    letter-spacing: var(--body-spacing);
   }
   /* .nav-container {
     padding: 0;
@@ -687,9 +716,7 @@ MEDIA QUERIES
   .nav__links--link a {
     color: var(--main-dark);
   }
-  .nav__links--link a:after {
-    background-color: var(--main-white);
-  }
+
   .down {
     display: none;
   }
