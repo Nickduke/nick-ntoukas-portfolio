@@ -404,7 +404,15 @@ header {
   border-radius: 100px;
 }
 
-.down {
+.bar2-effect:nth-child(2) {
+  width: 30px;
+}
+
+.bar3-effect:nth-child(3) {
+  width: 35px;
+}
+
+/* .down {
   display: block;
   width: 1px;
   height: 5rem;
@@ -427,7 +435,7 @@ header {
   to {
     transform: translateY(0em);
   }
-}
+} */
 
 /* ------------------ Typing -------------- */
 @keyframes typing {
@@ -440,10 +448,10 @@ header {
   width: 28ch;
   padding-bottom: 0.5em;
   animation: typing 4s, 0.5s infinite;
-  /* border-bottom: 1px solid var(--main-grey); */
+  border-bottom: 1px solid var(--main-grey);
   white-space: nowrap;
   overflow: hidden;
-  /* border-right: 1px solid; */
+  /* max-width: 20rem; */
   font-family: var(--secondary-font);
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -511,9 +519,10 @@ PROJECTS STYLES
 .projects__item:nth-child(2) {
   background: rgba(204, 71, 67, 0.137);
   border-radius: 0px 30px 0px 30px;
+  margin-bottom: 9em;
 }
 
-.projects__item:nth-child(3) {
+/* .projects__item:nth-child(3) {
   background: rgba(67, 204, 193, 0.137);
   border-radius: 0px 30px 0px 30px;
 }
@@ -521,7 +530,7 @@ PROJECTS STYLES
 .projects__item:nth-child(4) {
   background: rgba(204, 129, 67, 0.137);
   margin-bottom: 8em;
-}
+} */
 
 .project-image {
   border-radius: 0px 0px 0px 30px;
@@ -599,8 +608,12 @@ TOOLS STYLES
 }
 
 .tools__row {
+  margin: 1em;
+}
+
+.colored {
   font-size: 5rem;
-  padding: 10px;
+  margin: 0.2em;
 }
 
 /* /////////////
@@ -672,6 +685,36 @@ FOOTER STYLES
 .dark {
   color: var(--main-dark);
 }
+
+.red {
+  color: #ff0000;
+}
+
+.blue {
+  color: #00acee;
+}
+
+.insta {
+  background: #d6249f no-repeat;
+  background: radial-gradient(
+    circle at 30% 90%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 500px 500px 500px 500px;
+}
+
+.linkedin {
+  color: #0072b1;
+}
+
+.green {
+  color: #6cc644;
+}
 /* /////////////
 MEDIA QUERIES
 ///////////// */
@@ -679,7 +722,6 @@ MEDIA QUERIES
 @media (max-width: 800px) {
   .hamburger {
     display: block;
-    padding-top: 10px;
   }
   /* .bar {
     background-color: white;
@@ -710,7 +752,7 @@ MEDIA QUERIES
     transition: 0.3s ease-in-out;
     justify-content: space-evenly;
     align-items: center;
-    font-size: var(--fs-medium);
+    font-size: 1.4rem;
     letter-spacing: var(--body-spacing);
   }
   /* .nav-container {
@@ -723,6 +765,25 @@ MEDIA QUERIES
 
   .down {
     display: none;
+  }
+
+  .typed {
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: var(--fs-medium);
+  }
+
+  .colored {
+    font-size: 3rem;
+  }
+
+  .tools__container {
+    min-height: 0;
+    margin: 1em 0;
   }
 }
 
