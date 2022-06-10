@@ -221,7 +221,6 @@ template {
 CUSTOM PROPERTIES
 ///////////// */
 :root {
-  --primary-color: rgba(0, 217, 255, 0.507);
   --main-grey: rgb(54, 54, 54);
   --main-dark: rgb(39, 34, 34);
   --secondary-dark: rgba(39, 34, 34, 0.589);
@@ -295,6 +294,7 @@ h2 {
   font-size: var(--fs-x-large);
   color: var(--main-dark);
   letter-spacing: var(--body-spacing);
+  margin: 0;
 }
 
 h3 {
@@ -381,6 +381,10 @@ header {
   padding-top: 2em;
 }
 
+.nav-background {
+  background: var(--main-white);
+}
+
 .nav__links {
   display: flex;
 }
@@ -393,6 +397,10 @@ header {
   display: none;
   cursor: pointer;
 }
+
+/* .fixed-position {
+  position: fixed;
+} */
 
 .bar {
   display: block;
@@ -461,6 +469,10 @@ header {
 /* /////////////
 ABOUT STYLES
 ///////////// */
+#about {
+  background: rgba(0, 217, 255, 0.101);
+}
+
 .about-wrapper {
   display: flex;
   align-items: center;
@@ -498,7 +510,7 @@ PROJECTS STYLES
 .projects__title {
   text-align: center;
   padding-bottom: 1em;
-  padding-top: 5em;
+  padding-top: 4em;
 }
 
 .projects__container {
@@ -521,16 +533,6 @@ PROJECTS STYLES
   border-radius: 0px 30px 0px 30px;
   margin-bottom: 9em;
 }
-
-/* .projects__item:nth-child(3) {
-  background: rgba(67, 204, 193, 0.137);
-  border-radius: 0px 30px 0px 30px;
-}
-
-.projects__item:nth-child(4) {
-  background: rgba(204, 129, 67, 0.137);
-  margin-bottom: 8em;
-} */
 
 .project-image {
   border-radius: 0px 0px 0px 30px;
@@ -585,9 +587,17 @@ PROJECTS STYLES
   padding-top: 5px;
 }
 
+.tech-stack-icons i {
+  margin-left: 0;
+}
+
 /* /////////////
 TOOLS STYLES
 ///////////// */
+
+#tools {
+  background: rgba(0, 217, 255, 0.06);
+}
 
 .tools-wrapper {
   justify-content: flex;
@@ -596,7 +606,7 @@ TOOLS STYLES
 
 .tools__title {
   text-align: center;
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 .tools__container {
@@ -604,11 +614,11 @@ TOOLS STYLES
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  padding: 4em 0;
 }
 
 .tools__row {
-  margin: 1em;
+  padding: 1em;
 }
 
 .colored {
@@ -705,7 +715,7 @@ FOOTER STYLES
     #285aeb 90%
   );
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 500px 500px 500px 500px;
+  border-radius: 200px;
 }
 
 .linkedin {
@@ -783,7 +793,7 @@ MEDIA QUERIES
 
   .tools__container {
     min-height: 0;
-    margin: 1em 0;
+    padding-bottom: 3em;
   }
 }
 

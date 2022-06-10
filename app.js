@@ -1,15 +1,21 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav__links');
+const body = document.querySelector('body');
+const navContainer = document.querySelector('.nav-container');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
+  // body.classList.toggle('fixed-position');
+  // body.classList.toggle('nav-background');
 });
 
 document.querySelectorAll('.nav__links--link').forEach((n) =>
   n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    // body.classList.remove('fixed-position');
+    // body.classList.remove('nav-background');
   })
 );
 
