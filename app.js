@@ -71,3 +71,14 @@ youtubeIcon.addEventListener('mouseout', () => {
 youtubeIcon.addEventListener('mouseover', () => {
   document.querySelector('.fa-youtube').classList.add('red');
 });
+
+const toolsIcon = document.getElementById('tools-icon');
+
+toolsIcon.addEventListener('mouseover', () => {
+  console.log('hey');
+  document.getElementById('icon-title').classList.remove('blue-font');
+});
+
+toolsIcon.addEventListener('mouseout', () => {
+  document.getElementById('icon-title').classList.add('blue-font');
+});

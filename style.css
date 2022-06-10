@@ -286,6 +286,7 @@ h1 {
 h1 a {
   /* letter-spacing: var(--body-spacing); */
   font-family: var(--primary-font);
+  font-size: 1.5rem;
 }
 
 h2 {
@@ -498,6 +499,8 @@ ABOUT STYLES
   letter-spacing: var(--body-spacing);
   margin-top: 0.5em;
   text-align: center;
+  border-bottom: 1px var(--main-dark) solid;
+  padding-bottom: 0.5em;
 }
 
 /* /////////////
@@ -509,8 +512,9 @@ PROJECTS STYLES
 
 .projects__title {
   text-align: center;
-  padding-bottom: 1em;
-  padding-top: 4em;
+  padding-bottom: 0.5em;
+  padding-top: 2em;
+  border-bottom: 1px var(--main-dark) solid;
 }
 
 .projects__container {
@@ -531,7 +535,8 @@ PROJECTS STYLES
 .projects__item:nth-child(2) {
   background: rgba(204, 71, 67, 0.137);
   border-radius: 0px 30px 0px 30px;
-  margin-bottom: 9em;
+  margin-bottom: 5em;
+  margin-top: 1em;
 }
 
 .project-image {
@@ -539,7 +544,7 @@ PROJECTS STYLES
 }
 
 .projects__item {
-  margin: 3em auto;
+  margin: 2em auto;
   flex: 50%;
   display: flex;
   justify-content: center;
@@ -606,7 +611,9 @@ TOOLS STYLES
 
 .tools__title {
   text-align: center;
-  padding-top: 2em;
+  padding-top: 4em;
+  border-bottom: 1px var(--main-dark) solid;
+  padding-bottom: 0.5em;
 }
 
 .tools__container {
@@ -614,11 +621,30 @@ TOOLS STYLES
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4em 0;
+  padding-bottom: 9em;
+  padding-top: 1em;
 }
 
 .tools__row {
   padding: 1em;
+  display: flex;
+}
+
+.tools__row li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tools__row h6 {
+  font-family: var(--primary-font);
+  font-weight: normal;
+  font-size: var(--fs-small);
+  margin: 0;
+}
+
+.blue-font {
+  color: rgba(0, 217, 255, 0);
 }
 
 .colored {
