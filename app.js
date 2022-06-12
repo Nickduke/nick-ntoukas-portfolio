@@ -4,18 +4,24 @@ const body = document.querySelector('body');
 const navContainer = document.querySelector('.nav-container');
 
 hamburger.addEventListener('click', () => {
+  navContainer.classList.toggle('nav-padding');
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
-  body.classList.toggle('active');
 });
 
 document.querySelectorAll('.nav__links--link').forEach((n) =>
   n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
-    body.classList.toggle('active');
+    navContainer.classList.remove('nav-padding');
   })
 );
+
+const title = document.querySelector('.typed');
+
+setTimeout(() => {
+  title.classList.remove('hidden');
+}, 2000);
 
 // ------------------------WORK ON THIS--------------------
 // const bar2 = document.querySelector('.bar2');
