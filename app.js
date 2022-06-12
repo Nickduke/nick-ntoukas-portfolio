@@ -6,16 +6,14 @@ const navContainer = document.querySelector('.nav-container');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
-  // body.classList.toggle('fixed-position');
-  // body.classList.toggle('nav-background');
+  body.classList.toggle('active');
 });
 
 document.querySelectorAll('.nav__links--link').forEach((n) =>
   n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
-    // body.classList.remove('fixed-position');
-    // body.classList.remove('nav-background');
+    body.classList.toggle('active');
   })
 );
 

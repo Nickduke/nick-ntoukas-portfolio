@@ -388,6 +388,7 @@ header {
 
 .nav__links {
   display: flex;
+  /* z-index: 1; */
 }
 
 .nav__links--link {
@@ -398,10 +399,6 @@ header {
   display: none;
   cursor: pointer;
 }
-
-/* .fixed-position {
-  position: fixed;
-} */
 
 .bar {
   display: block;
@@ -535,6 +532,16 @@ PROJECTS STYLES
 .projects__item:nth-child(2) {
   background: rgba(204, 71, 67, 0.137);
   border-radius: 0px 30px 0px 30px;
+}
+
+.projects__item:nth-child(3) {
+  background: rgba(88, 201, 201, 0.192);
+  border-radius: 0px 30px 0px 30px;
+}
+
+.projects__item:nth-child(4) {
+  background: rgba(193, 67, 204, 0.137);
+  border-radius: 0px 30px 0px 30px;
   margin-bottom: 5em;
   margin-top: 1em;
 }
@@ -611,7 +618,7 @@ TOOLS STYLES
 
 .tools__title {
   text-align: center;
-  padding-top: 4em;
+  padding-top: 2em;
   border-bottom: 1px var(--main-dark) solid;
   padding-bottom: 0.5em;
 }
@@ -621,7 +628,7 @@ TOOLS STYLES
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 9em;
+  padding-bottom: 1em;
   padding-top: 1em;
 }
 
@@ -649,7 +656,7 @@ TOOLS STYLES
 
 .colored {
   font-size: 5rem;
-  margin: 0.2em;
+  margin: 0.3em;
 }
 
 /* /////////////
@@ -832,7 +839,7 @@ MEDIA QUERIES
     border-radius: 0px 30px 0px 0px;
   }
   .project-info {
-    margin: 3em;
+    margin: 0 3em 2em 3em;
   }
 }
 
