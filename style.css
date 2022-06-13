@@ -516,6 +516,12 @@ ABOUT STYLES
   text-align: center;
 }
 
+.about-contact {
+  font-family: var(--secondary-font);
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
 .about__sub-title {
   font-family: var(--secondary-font);
   font-size: var(--fs-small);
@@ -571,7 +577,6 @@ PROJECTS STYLES
   background: rgba(193, 67, 204, 0.137);
   border-radius: 0px 30px 0px 30px;
   margin-bottom: 5em;
-  margin-top: 1em;
 }
 
 .project-image {
