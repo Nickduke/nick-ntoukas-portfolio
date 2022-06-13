@@ -470,15 +470,20 @@ header {
 
 .arrow {
   font-size: var(--fs-medium);
-  transition: var(--main-transition);
 }
 
 .down {
   display: block;
   width: 1px;
   animation: pulse 3s ease-in-out infinite;
-
+  transition: var(--main-transition);
   margin: 0;
+}
+
+.down:hover,
+.down:focus {
+  color: rgb(0, 217, 255);
+  font-size: 1.9rem;
 }
 
 @keyframes pulse {
