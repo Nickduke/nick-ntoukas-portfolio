@@ -468,6 +468,32 @@ header {
   width: 35px;
 }
 
+.arrow {
+  font-size: var(--fs-medium);
+  transition: var(--main-transition);
+}
+
+.down {
+  display: block;
+  width: 1px;
+  animation: pulse 3s ease-in-out infinite;
+  margin: 0;
+}
+
+@keyframes pulse {
+  from {
+    transform: translateY(0em);
+  }
+
+  50% {
+    transform: translateY(0.5em);
+  }
+
+  to {
+    transform: translateY(0em);
+  }
+}
+
 /* ------------------ Typing -------------- */
 @keyframes typing {
   from {
@@ -830,10 +856,6 @@ MEDIA QUERIES
 
   .nav__links--link a {
     color: var(--main-dark);
-  }
-
-  .down {
-    display: none;
   }
 
   .typed {

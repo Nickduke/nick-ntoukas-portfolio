@@ -7,6 +7,7 @@ hamburger.addEventListener('click', () => {
   navContainer.classList.toggle('nav-padding');
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
+  document.querySelector('.arrow').classList.toggle('hidden');
 });
 
 document.querySelectorAll('.nav__links--link').forEach((n) =>
@@ -14,12 +15,17 @@ document.querySelectorAll('.nav__links--link').forEach((n) =>
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
     navContainer.classList.remove('nav-padding');
+    document.querySelector('.arrow').classList.remove('hidden');
   })
 );
 
 setTimeout(() => {
   document.querySelector('.typed').classList.remove('hidden');
 }, 2000);
+
+setTimeout(() => {
+  document.querySelector('.arrow').classList.remove('hidden');
+}, 7000);
 
 const linkedinIcon = document.getElementById('linkedin');
 linkedinIcon.addEventListener('mouseout', () => {
