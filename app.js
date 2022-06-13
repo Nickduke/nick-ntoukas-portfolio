@@ -17,24 +17,9 @@ document.querySelectorAll('.nav__links--link').forEach((n) =>
   })
 );
 
-const title = document.querySelector('.typed');
-
 setTimeout(() => {
-  title.classList.remove('hidden');
+  document.querySelector('.typed').classList.remove('hidden');
 }, 2000);
-
-// ------------------------WORK ON THIS--------------------
-// const bar2 = document.querySelector('.bar2');
-// const bar3 = document.querySelector('.bar3');
-
-// hamburger.addEventListener('mouseover', () => {
-//   bar2.classList.add('bar2-effect');
-//   bar3.classList.add('bar3-effect');
-// });
-// hamburger.addEventListener('mouseout', () => {
-//   bar2.classList.remove('bar2-effect');
-//   bar3.classList.remove('bar3-effect');
-// });
 
 const linkedinIcon = document.getElementById('linkedin');
 linkedinIcon.addEventListener('mouseout', () => {
@@ -74,15 +59,4 @@ youtubeIcon.addEventListener('mouseout', () => {
 });
 youtubeIcon.addEventListener('mouseover', () => {
   document.querySelector('.fa-youtube').classList.add('red');
-});
-
-const toolsIcon = document.getElementById('tools-icon');
-
-toolsIcon.addEventListener('mouseover', () => {
-  console.log('hey');
-  document.getElementById('icon-title').classList.remove('blue-font');
-});
-
-toolsIcon.addEventListener('mouseout', () => {
-  document.getElementById('icon-title').classList.add('blue-font');
 });

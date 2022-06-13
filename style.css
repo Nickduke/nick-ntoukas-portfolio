@@ -581,7 +581,6 @@ PROJECTS STYLES
 
 .project-image:hover,
 .project-image:focus {
-  /* opacity: 0.8; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -663,7 +662,7 @@ TOOLS STYLES
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 0.5em;
+  padding-bottom: 2.5em;
   padding-top: 1em;
 }
 
@@ -691,7 +690,7 @@ TOOLS STYLES
 
 .colored {
   font-size: 5rem;
-  margin: 0.4em;
+  margin: 0.4em 0.4em 0.2em 0.4em;
 }
 
 /* /////////////
@@ -773,17 +772,7 @@ FOOTER STYLES
 }
 
 .insta {
-  background: #d6249f no-repeat;
-  background: radial-gradient(
-    circle at 30% 90%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 200px;
+  color: #d6249f;
 }
 
 .linkedin {
@@ -833,9 +822,6 @@ MEDIA QUERIES
     font-size: 1.4rem;
     letter-spacing: var(--body-spacing);
   }
-  /* .nav-container {
-    padding: 0;
-  } */
 
   .nav__links--link a {
     color: var(--main-dark);
