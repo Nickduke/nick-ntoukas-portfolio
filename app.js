@@ -25,7 +25,7 @@ setTimeout(() => {
 
 setTimeout(() => {
   document.querySelector('.arrow').classList.remove('hidden');
-}, 7000);
+}, 8000);
 
 const linkedinIcon = document.getElementById('linkedin');
 linkedinIcon.addEventListener('mouseout', () => {
