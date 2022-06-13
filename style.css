@@ -477,6 +477,7 @@ header {
   display: block;
   width: 1px;
   animation: pulse 3s ease-in-out infinite;
+
   margin: 0;
 }
 
