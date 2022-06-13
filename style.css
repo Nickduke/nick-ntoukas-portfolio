@@ -888,4 +888,8 @@ MEDIA QUERIES
     font-size: var(--fs-small);
     max-width: 100%;
   }
+
+  .h1 {
+    font-size: var(--fs-small);
+  }
 }
